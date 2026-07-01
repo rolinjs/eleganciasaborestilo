@@ -4,14 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elegancia Sabor y Estilo · Organización de Eventos Lima</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Questrial&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Questrial&family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 :root {
   --carbon: #1E1C1C;
-  --golden: #FFC934;
+  --golden: #D8C3A5;        /* champagne — now the dominant light accent */
+  --golden-shine: #C9A66B;  /* muted true gold — reserved for small "brillo" touches only */
+  --champagne-soft: #EAE1CE; /* softened champagne, used where the old bright yellow felt too strong */
   --mint: #F9FFFC;
-  --cherry: #FFB9D0;
+  --cherry: #F3C9D6;        /* softened rosé to sit with the champagne palette */
   --carbon-light: rgba(30,28,28,0.08);
   --shadow: 0 8px 40px rgba(30,28,28,0.18);
   --transition: 0.38s cubic-bezier(.4,0,.2,1);
@@ -95,7 +97,7 @@ nav {
   padding: 11px 14px; border-radius: 10px;
   transition: var(--transition); text-align: left;
 }
-.mobile-menu a:hover, .mobile-menu button:hover { background: rgba(255,201,52,0.12); color: var(--golden); }
+.mobile-menu a:hover, .mobile-menu button:hover { background: rgba(216,195,165,0.12); color: var(--golden); }
 
 /* WPP FIXED BTN */
 .wpp-fixed {
@@ -134,7 +136,7 @@ nav {
 }
 .hero-badge {
   display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(255,201,52,0.12); border: 1.5px solid rgba(255,201,52,0.35);
+  background: rgba(216,195,165,0.12); border: 1.5px solid rgba(216,195,165,0.35);
   color: var(--golden); border-radius: 30px;
   padding: 6px 18px; font-size: 0.8rem;
   letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 24px;
@@ -157,9 +159,9 @@ nav {
   letter-spacing: 0.08em; border: none; border-radius: 40px;
   padding: 14px 34px; transition: var(--transition);
   display: inline-flex; align-items: center; gap: 9px;
-  box-shadow: 0 4px 20px rgba(255,201,52,0.3);
+  box-shadow: 0 4px 20px rgba(201,166,107,0.35);
 }
-.btn-primary:hover { background: var(--cherry); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(255,185,208,0.4); }
+.btn-primary:hover { background: var(--cherry); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(243,201,214,0.4); }
 .btn-outline {
   background: transparent; color: var(--mint);
   font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem;
@@ -172,8 +174,8 @@ nav {
 .hero-frame {
   width: clamp(260px, 38vw, 420px); height: clamp(300px, 44vw, 480px);
   border-radius: 60% 40% 50% 50% / 55% 55% 45% 45%;
-  background: linear-gradient(135deg, rgba(255,201,52,0.15), rgba(255,185,208,0.1));
-  border: 1px solid rgba(255,201,52,0.2);
+  background: linear-gradient(135deg, rgba(216,195,165,0.15), rgba(243,201,214,0.1));
+  border: 1px solid rgba(216,195,165,0.2);
   display: flex; align-items: center; justify-content: center;
   position: relative; animation: float 4s ease-in-out infinite;
   backdrop-filter: blur(2px); overflow: hidden;
@@ -186,7 +188,7 @@ nav {
 }
 .mandala-svg {
   width: 85%; height: auto; max-width: 280px; margin-bottom: 16px;
-  filter: drop-shadow(0 0 12px rgba(255,201,52,0.4));
+  filter: drop-shadow(0 0 12px rgba(201,166,107,0.45));
   animation: mandalaSpin 20s linear infinite;
 }
 @keyframes mandalaSpin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
@@ -195,18 +197,18 @@ nav {
   letter-spacing: 3px; color: rgba(249,255,252,0.9);
   background: rgba(30,28,28,0.5); padding: 6px 16px;
   border-radius: 40px; backdrop-filter: blur(4px);
-  border: 1px solid rgba(255,201,52,0.3);
+  border: 1px solid rgba(216,195,165,0.3);
 }
 .hero-frame::before {
   content: ''; position: absolute; inset: -12px;
-  border-radius: inherit; border: 2px dashed rgba(255,201,52,0.15);
+  border-radius: inherit; border: 2px dashed rgba(216,195,165,0.15);
   animation: spin 22s linear infinite;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 .hero-stats { display: flex; gap: 32px; margin-top: 44px; }
 .hero-stat span:first-child {
   display: block; font-family: 'Bebas Neue', sans-serif;
-  font-size: 2.2rem; color: var(--golden); line-height: 1;
+  font-size: 2.2rem; color: var(--golden-shine); line-height: 1;
 }
 .hero-stat span:last-child {
   font-size: 0.78rem; color: rgba(249,255,252,0.5);
@@ -216,14 +218,14 @@ nav {
 /* SECTION LABELS */
 .section-label {
   display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(255,201,52,0.1); color: var(--golden);
+  background: rgba(216,195,165,0.1); color: var(--golden);
   border-radius: 30px; padding: 5px 16px; font-size: 0.78rem;
   letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 12px;
-  border: 1.5px solid rgba(255,201,52,0.25);
+  border: 1.5px solid rgba(216,195,165,0.25);
 }
 .section-label.cherry {
-  background: rgba(255,185,208,0.15); color: var(--carbon);
-  border-color: rgba(255,185,208,0.4);
+  background: rgba(243,201,214,0.15); color: var(--carbon);
+  border-color: rgba(243,201,214,0.4);
 }
 .section-label.dark {
   background: rgba(30,28,28,0.1); color: var(--carbon);
@@ -250,7 +252,7 @@ section { padding: 90px 5vw; }
 .about-img-main {
   border-radius: 28px; overflow: hidden; aspect-ratio: 4/5;
   background: linear-gradient(135deg, var(--carbon) 0%, #2d2b2b 100%);
-  border: 1px solid rgba(255,201,52,0.15);
+  border: 1px solid rgba(216,195,165,0.15);
 }
 .about-img-main img {
   width: 100%; height: 100%; object-fit: cover; display: block;
@@ -259,7 +261,7 @@ section { padding: 90px 5vw; }
   position: absolute; bottom: -22px; right: -22px;
   background: var(--golden); color: var(--carbon);
   border-radius: 20px; padding: 20px 26px;
-  text-align: center; box-shadow: 0 8px 32px rgba(255,201,52,0.35);
+  text-align: center; box-shadow: 0 8px 32px rgba(201,166,107,0.4);
 }
 .about-img-badge span:first-child {
   display: block; font-family: 'Bebas Neue', sans-serif;
@@ -288,7 +290,7 @@ section { padding: 90px 5vw; }
   border: 1.5px solid rgba(249,255,252,0.07); transition: var(--transition);
   border-top: 4px solid transparent;
 }
-.value-card:hover { border-top-color: var(--golden); transform: translateY(-6px); background: rgba(255,201,52,0.05); }
+.value-card:hover { border-top-color: var(--golden); transform: translateY(-6px); background: rgba(216,195,165,0.05); }
 .value-icon { font-size: 2.5rem; color: var(--golden); margin-bottom: 20px; }
 .value-card h4 { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--mint); margin-bottom: 12px; }
 .value-card p { font-size: 0.92rem; color: rgba(249,255,252,0.55); line-height: 1.7; }
@@ -321,19 +323,19 @@ section { padding: 90px 5vw; }
   background: rgba(30,28,28,0.38);
   display: flex; align-items: center; justify-content: center;
 }
-.srv-img-overlay i { font-size: 3.5rem; color: rgba(255,201,52,0.55); filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4)); }
+.srv-img-overlay i { font-size: 3.5rem; color: rgba(216,195,165,0.55); filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4)); }
 .srv-tag {
   position: absolute; top: 14px; left: 14px;
-  background: var(--golden); color: var(--carbon);
+  background: var(--golden-shine); color: var(--carbon);
   font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
   border-radius: 20px; padding: 4px 12px; font-weight: 600; z-index: 2;
 }
 .srv-body { padding: 22px 22px 24px; }
-.srv-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--mint); margin-bottom: 8px; }
+.srv-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--golden); margin-bottom: 8px; }
 .srv-desc { font-size: 0.9rem; color: rgba(249,255,252,0.5); line-height: 1.6; margin-bottom: 16px; }
 .srv-footer { display: flex; align-items: center; justify-content: space-between; }
 .srv-icon-badge {
-  width: 42px; height: 42px; background: rgba(255,201,52,0.12); border-radius: 50%;
+  width: 42px; height: 42px; background: rgba(216,195,165,0.12); border-radius: 50%;
   display: flex; align-items: center; justify-content: center; color: var(--golden); font-size: 1.1rem;
 }
 .srv-cta {
@@ -397,7 +399,7 @@ section { padding: 90px 5vw; }
 .process-item { display: flex; gap: 24px; padding: 24px 0; position: relative; }
 .process-item + .process-item { border-top: 1px solid rgba(249,255,252,0.05); }
 .process-dot {
-  width: 40px; height: 40px; border-radius: 50%; background: var(--golden);
+  width: 40px; height: 40px; border-radius: 50%; background: var(--golden-shine);
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0; position: relative; z-index: 2;
 }
@@ -409,15 +411,15 @@ section { padding: 90px 5vw; }
   background: rgba(249,255,252,0.03); border: 1px solid rgba(249,255,252,0.07);
   border-radius: 24px; padding: 44px; text-align: center;
 }
-.process-visual i { font-size: 6rem; color: rgba(255,201,52,0.15); display: block; margin-bottom: 24px; }
+.process-visual i { font-size: 6rem; color: rgba(216,195,165,0.15); display: block; margin-bottom: 24px; }
 .process-visual h3 { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--mint); margin-bottom: 12px; }
 .process-visual p { font-size: 0.95rem; color: rgba(249,255,252,0.5); line-height: 1.7; }
 .process-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 28px; }
 .pstat {
-  background: rgba(255,201,52,0.08); border: 1px solid rgba(255,201,52,0.15);
+  background: rgba(216,195,165,0.08); border: 1px solid rgba(216,195,165,0.15);
   border-radius: 14px; padding: 20px; text-align: center;
 }
-.pstat-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; color: var(--golden); line-height: 1; }
+.pstat-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; color: var(--golden-shine); line-height: 1; }
 .pstat-label { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(249,255,252,0.45); margin-top: 4px; }
 
 /* ============================================================
@@ -451,15 +453,15 @@ section { padding: 90px 5vw; }
 }
 .yt-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(255,201,52,0.35);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,201,52,0.15);
+  border-color: rgba(216,195,165,0.35);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(216,195,165,0.15);
 }
 
 /* Glow sutil en la base de cada card */
 .yt-card-glow {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at bottom, rgba(255,201,52,0.12), transparent 70%);
+  background: radial-gradient(ellipse at bottom, rgba(216,195,165,0.12), transparent 70%);
   pointer-events: none;
   z-index: 0;
   border-radius: 20px;
@@ -499,6 +501,28 @@ section { padding: 90px 5vw; }
   height: 100%;
   border: none;
   display: block;
+}
+
+/* TESTIMONIALS */
+.testimonials-section { background: var(--carbon); }
+.testimonials-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 28px; margin-top: 52px; max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+.testimonial-card {
+  background: rgba(249,255,252,0.04); border: 1px solid rgba(216,195,165,0.18);
+  border-radius: 20px; padding: 36px 30px; text-align: center;
+  transition: var(--transition);
+}
+.testimonial-card:hover { border-color: var(--golden-shine); transform: translateY(-4px); }
+.testimonial-mark { font-family: 'Great Vibes', cursive; font-size: 3rem; color: var(--golden-shine); line-height: 0.4; display: block; margin-bottom: 6px; }
+.testimonial-quote {
+  font-family: 'Great Vibes', cursive; font-size: 1.65rem; line-height: 1.35;
+  color: var(--mint); margin-bottom: 16px;
+}
+.testimonial-author {
+  font-family: 'Questrial', sans-serif; font-size: 0.78rem;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--golden);
 }
 
 /* CONTACT */
@@ -555,7 +579,7 @@ section { padding: 90px 5vw; }
 .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(249,255,252,0.25); }
 .form-group select option { background: var(--carbon); }
 .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
-  border-color: var(--golden); box-shadow: 0 0 0 3px rgba(255,201,52,0.1);
+  border-color: var(--golden); box-shadow: 0 0 0 3px rgba(216,195,165,0.1);
 }
 .form-group textarea { resize: vertical; min-height: 120px; }
 .submit-btn {
@@ -602,7 +626,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
   display: flex; align-items: center; gap: 10px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.2);
   transition: transform 0.4s cubic-bezier(.4,0,.2,1);
-  white-space: nowrap; border: 1px solid rgba(255,201,52,0.2);
+  white-space: nowrap; border: 1px solid rgba(216,195,165,0.2);
 }
 .toast.show { transform: translateX(-50%) translateY(0); }
 .toast i { color: var(--golden); }
@@ -669,12 +693,10 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
 <nav id="mainNav">
   <div class="nav-logo" onclick="navigate('home')">
     <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="48" height="48" rx="14" fill="#FFC934"/>
-      <path d="M14 20 Q16 12 24 12 Q32 12 34 20 L32 36 Q30 40 24 40 Q18 40 16 36 Z" fill="#1E1C1C" opacity="0.12"/>
-      <path d="M16 22 Q20 17 24 19 Q28 17 32 22" stroke="#1E1C1C" stroke-width="2" fill="none" stroke-linecap="round"/>
-      <circle cx="20" cy="28" r="3" fill="#1E1C1C" opacity="0.3"/>
-      <circle cx="28" cy="28" r="3" fill="#1E1C1C" opacity="0.3"/>
-      <path d="M22 33 Q24 35 26 33" stroke="#1E1C1C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <circle cx="24" cy="24" r="24" fill="#1E1C1C"/>
+      <circle cx="24" cy="24" r="20.5" fill="none" stroke="#D8C3A5" stroke-width="0.6"/>
+      <circle cx="24" cy="24" r="17" fill="none" stroke="#C9A66B" stroke-width="0.4" opacity="0.6"/>
+      <text x="24" y="32" text-anchor="middle" font-family="'Great Vibes', cursive" font-size="26" fill="#D8C3A5">E</text>
     </svg>
     <div class="nav-logo-text">
       <span>Elegancia</span>
@@ -748,17 +770,17 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
         <div class="hero-frame">
           <div class="hero-frame-inner">
             <svg class="mandala-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="100" cy="100" r="92" stroke="#FFC934" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.4"/>
-              <circle cx="100" cy="100" r="82" stroke="#FFB9D0" stroke-width="1" opacity="0.5"/>
-              <circle cx="100" cy="100" r="72" stroke="#FFC934" stroke-width="1.5" opacity="0.6"/>
+              <circle cx="100" cy="100" r="92" stroke="#D8C3A5" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.4"/>
+              <circle cx="100" cy="100" r="82" stroke="#F3C9D6" stroke-width="1" opacity="0.5"/>
+              <circle cx="100" cy="100" r="72" stroke="#D8C3A5" stroke-width="1.5" opacity="0.6"/>
               <circle cx="100" cy="100" r="62" stroke="#F9FFFC" stroke-width="0.8" stroke-dasharray="3 5" opacity="0.4"/>
-              <circle cx="100" cy="100" r="52" stroke="#FFC934" stroke-width="1.2" opacity="0.7"/>
-              <circle cx="100" cy="100" r="42" stroke="#FFB9D0" stroke-width="1" opacity="0.6"/>
-              <circle cx="100" cy="100" r="32" stroke="#FFC934" stroke-width="1.5" opacity="0.8"/>
-              <circle cx="100" cy="100" r="22" fill="#FFC934" fill-opacity="0.15" stroke="#FFC934" stroke-width="1"/>
-              <circle cx="100" cy="100" r="12" fill="#FFB9D0" fill-opacity="0.2" stroke="#FFB9D0" stroke-width="0.8"/>
-              <circle cx="100" cy="100" r="5" fill="#FFC934" opacity="0.9"/>
-              <g fill="#FFC934" fill-opacity="0.12" stroke="#FFC934" stroke-width="0.8">
+              <circle cx="100" cy="100" r="52" stroke="#D8C3A5" stroke-width="1.2" opacity="0.7"/>
+              <circle cx="100" cy="100" r="42" stroke="#F3C9D6" stroke-width="1" opacity="0.6"/>
+              <circle cx="100" cy="100" r="32" stroke="#D8C3A5" stroke-width="1.5" opacity="0.8"/>
+              <circle cx="100" cy="100" r="22" fill="#D8C3A5" fill-opacity="0.15" stroke="#D8C3A5" stroke-width="1"/>
+              <circle cx="100" cy="100" r="12" fill="#F3C9D6" fill-opacity="0.2" stroke="#F3C9D6" stroke-width="0.8"/>
+              <circle cx="100" cy="100" r="5" fill="#C9A66B" opacity="0.9"/>
+              <g fill="#D8C3A5" fill-opacity="0.12" stroke="#D8C3A5" stroke-width="0.8">
                 <path d="M100 28 L108 52 L100 48 L92 52 Z"/>
                 <path d="M100 172 L108 148 L100 152 L92 148 Z"/>
                 <path d="M28 100 L52 108 L48 100 L52 92 Z"/>
@@ -768,7 +790,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
                 <path d="M151 49 L133 63 L140 67 L147 63 Z"/>
                 <path d="M49 151 L67 137 L60 133 L53 137 Z"/>
               </g>
-              <g fill="#FFB9D0" fill-opacity="0.15" stroke="#FFB9D0" stroke-width="0.6">
+              <g fill="#F3C9D6" fill-opacity="0.15" stroke="#F3C9D6" stroke-width="0.6">
                 <path d="M100 38 L105 58 L100 55 L95 58 Z"/>
                 <path d="M100 162 L105 142 L100 145 L95 142 Z"/>
                 <path d="M38 100 L58 105 L55 100 L58 95 Z"/>
@@ -778,7 +800,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
                 <path d="M141 59 L128 70 L133 74 L138 70 Z"/>
                 <path d="M59 141 L72 130 L67 126 L62 130 Z"/>
               </g>
-              <g fill="#FFC934" fill-opacity="0.2" stroke="#FFC934" stroke-width="0.7">
+              <g fill="#D8C3A5" fill-opacity="0.2" stroke="#D8C3A5" stroke-width="0.7">
                 <path d="M100 60 Q110 80 100 90 Q90 80 100 60 Z"/>
                 <path d="M100 140 Q110 120 100 110 Q90 120 100 140 Z"/>
                 <path d="M60 100 Q80 110 90 100 Q80 90 60 100 Z"/>
@@ -788,7 +810,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
                 <path d="M130 70 Q115 82 110 75 Q115 68 130 70 Z"/>
                 <path d="M70 130 Q85 118 90 125 Q85 132 70 130 Z"/>
               </g>
-              <g stroke="#FFC934" stroke-width="0.7" opacity="0.5">
+              <g stroke="#D8C3A5" stroke-width="0.7" opacity="0.5">
                 <line x1="100" y1="8" x2="100" y2="22"/>
                 <line x1="100" y1="178" x2="100" y2="192"/>
                 <line x1="8" y1="100" x2="22" y2="100"/>
@@ -798,7 +820,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
                 <line x1="165" y1="35" x2="155" y2="45"/>
                 <line x1="45" y1="155" x2="35" y2="165"/>
               </g>
-              <g fill="#FFC934" opacity="0.7">
+              <g fill="#C9A66B" opacity="0.7">
                 <circle cx="100" cy="18" r="2"/>
                 <circle cx="100" cy="182" r="2"/>
                 <circle cx="18" cy="100" r="2"/>
@@ -808,10 +830,10 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
                 <circle cx="155" cy="45" r="1.5"/>
                 <circle cx="45" cy="155" r="1.5"/>
               </g>
-              <polygon points="100,25 115,45 100,65 85,45" fill="#FFB9D0" fill-opacity="0.3" stroke="#FFB9D0" stroke-width="0.5"/>
-              <polygon points="100,135 115,155 100,175 85,155" fill="#FFB9D0" fill-opacity="0.3" stroke="#FFB9D0" stroke-width="0.5"/>
-              <polygon points="25,100 45,85 65,100 45,115" fill="#FFB9D0" fill-opacity="0.3" stroke="#FFB9D0" stroke-width="0.5"/>
-              <polygon points="135,100 155,85 175,100 155,115" fill="#FFB9D0" fill-opacity="0.3" stroke="#FFB9D0" stroke-width="0.5"/>
+              <polygon points="100,25 115,45 100,65 85,45" fill="#F3C9D6" fill-opacity="0.3" stroke="#F3C9D6" stroke-width="0.5"/>
+              <polygon points="100,135 115,155 100,175 85,155" fill="#F3C9D6" fill-opacity="0.3" stroke="#F3C9D6" stroke-width="0.5"/>
+              <polygon points="25,100 45,85 65,100 45,115" fill="#F3C9D6" fill-opacity="0.3" stroke="#F3C9D6" stroke-width="0.5"/>
+              <polygon points="135,100 155,85 175,100 155,115" fill="#F3C9D6" fill-opacity="0.3" stroke="#F3C9D6" stroke-width="0.5"/>
             </svg>
           </div>
         </div>
@@ -822,24 +844,30 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
   <!-- MISSION & VISION -->
   <section style="background:var(--mint);padding:90px 5vw;">
     <div style="max-width:1100px;margin:0 auto;text-align:center">
-      <div class="section-label dark reveal"><i class="fas fa-heart" style="font-size:0.8rem"></i> Nuestra Esencia</div>
+      <div class="section-label dark reveal">Nuestra Esencia</div>
       <h2 class="section-title reveal">Misión &amp; <span class="accent">Visión</span></h2>
       <p class="section-desc reveal" style="margin:0 auto">Los valores que guían cada evento que producimos con amor y dedicación.</p>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:52px;max-width:1100px;margin-left:auto;margin-right:auto;" class="mv-grid-resp">
-      <div style="border-radius:24px;padding:44px 38px;position:relative;overflow:hidden;background:var(--golden);color:var(--carbon);" class="reveal reveal-delay-1">
-        <div style="width:64px;height:64px;background:rgba(30,28,28,0.12);border-radius:18px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;font-size:1.7rem;color:var(--carbon);">
-          <i class="fas fa-bullseye"></i>
-        </div>
+      <div style="border-radius:24px;padding:44px 38px;position:relative;overflow:hidden;background:var(--champagne-soft);color:var(--carbon);" class="reveal reveal-delay-1">
+        <div style="width:44px;height:2px;background:var(--golden-shine);margin-bottom:24px;"></div>
         <h3 style="font-family:'Bebas Neue',sans-serif;font-size:2rem;margin-bottom:14px;letter-spacing:0.08em;">Nuestra Misión</h3>
-        <p style="font-size:1rem;line-height:1.75;opacity:0.8;">Brindar experiencias únicas e inolvidables mediante la organización y producción de eventos sociales, corporativos y espectáculos de alta calidad, ofreciendo creatividad, compromiso y atención personalizada para superar las expectativas de nuestros clientes.</p>
+        <p style="font-size:1rem;line-height:1.75;opacity:0.75;">Brindar experiencias únicas e inolvidables mediante la organización y producción de eventos sociales, corporativos y espectáculos de alta calidad, ofreciendo creatividad, compromiso y atención personalizada para superar las expectativas de nuestros clientes.</p>
       </div>
       <div style="border-radius:24px;padding:44px 38px;position:relative;overflow:hidden;background:var(--carbon);color:var(--mint);" class="reveal reveal-delay-2">
-        <div style="width:64px;height:64px;background:rgba(255,201,52,0.12);border-radius:18px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;font-size:1.7rem;color:var(--golden);">
-          <i class="fas fa-eye"></i>
-        </div>
+        <svg width="44" height="44" viewBox="0 0 44 44" style="margin-bottom:24px;display:block;" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke="#D8C3A5" stroke-width="1">
+            <ellipse cx="22" cy="12" rx="5" ry="9" transform="rotate(0 22 22)"/>
+            <ellipse cx="22" cy="12" rx="5" ry="9" transform="rotate(60 22 22)"/>
+            <ellipse cx="22" cy="12" rx="5" ry="9" transform="rotate(120 22 22)"/>
+            <ellipse cx="22" cy="12" rx="5" ry="9" transform="rotate(180 22 22)"/>
+            <ellipse cx="22" cy="12" rx="5" ry="9" transform="rotate(240 22 22)"/>
+            <ellipse cx="22" cy="12" rx="5" ry="9" transform="rotate(300 22 22)"/>
+          </g>
+          <circle cx="22" cy="22" r="3" fill="#C9A66B"/>
+        </svg>
         <h3 style="font-family:'Bebas Neue',sans-serif;font-size:2rem;margin-bottom:14px;letter-spacing:0.08em;">Nuestra Visión</h3>
-        <p style="font-size:1rem;line-height:1.75;opacity:0.7;">SSer una empresa líder en organización de eventos y espectáculos a nivel nacional, reconocida por la innovación, excelencia y profesionalismo en cada proyecto, convirtiéndonos en la primera opción para quienes buscan crear momentos memorables.</p>
+        <p style="font-size:1rem;line-height:1.75;opacity:0.7;">Ser una empresa líder en organización de eventos y espectáculos a nivel nacional, reconocida por la innovación, excelencia y profesionalismo en cada proyecto, convirtiéndonos en la primera opción para quienes buscan crear momentos memorables.</p>
       </div>
     </div>
   </section>
@@ -847,8 +875,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
   <!-- FEATURED SERVICES (home preview) -->
   <section class="services-section">
     <div style="max-width:1100px;margin:0 auto;">
-      <div class="section-label reveal" style="background:rgba(30,28,28,0.12);color:var(--carbon);border-color:rgba(30,28,28,0.2);">
-        <i class="fas fa-star" style="font-size:0.8rem"></i> Lo que ofrecemos
+      <div class="section-label reveal" style="background:rgba(30,28,28,0.12);color:var(--carbon);border-color:rgba(30,28,28,0.2);">Lo que ofrecemos
       </div>
       <h2 class="section-title reveal" style="color:var(--carbon);">Nuestros <span style="color:#1E1C1C;text-decoration:underline;text-decoration-color:var(--golden);">Servicios</span></h2>
       <p class="section-desc reveal" style="color:rgba(30,28,28,0.65);">Una selección de lo que hacemos para que tu evento sea inolvidable.</p>
@@ -864,37 +891,55 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
   <!-- WHY US -->
   <section style="background:var(--mint);padding:90px 5vw;">
     <div style="max-width:1100px;margin:0 auto;text-align:center">
-      <div class="section-label dark reveal"><i class="fas fa-award" style="font-size:0.8rem"></i> ¿Por qué elegirnos?</div>
-      <h2 class="section-title reveal">La <span class="accent">Diferencia</span><br></h2>
+      <div class="section-label dark reveal">¿Por qué elegirnos?</div>
+      <h2 class="reveal" style="font-family:'Great Vibes',cursive;font-weight:400;font-size:clamp(2.6rem,6vw,4.2rem);color:var(--carbon);letter-spacing:0.01em;">La Diferencia</h2>
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:52px;max-width:1100px;margin-left:auto;margin-right:auto;" class="why-grid-resp">
       <div style="text-align:center;padding:36px 24px;border-radius:20px;border:1.5px solid rgba(30,28,28,0.1);transition:var(--transition);background:#fff;" class="reveal reveal-delay-1 why-c">
-        <div style="width:70px;height:70px;margin:0 auto 20px;border-radius:50%;background:rgba(255,201,52,0.1);display:flex;align-items:center;justify-content:center;font-size:1.7rem;color:var(--golden);">
-          <i class="fas fa-heart"></i>
-        </div>
-        <h4 style="font-family:'Bebas Neue',sans-serif;font-size:1.25rem;color:var(--carbon);margin-bottom:10px;">Atención Personalizada</h4>
+        <div style="width:56px;height:56px;margin:0 auto 20px;border-radius:50%;border:1.5px solid var(--golden-shine);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--golden-shine);">01</div>
+        <h4 style="font-family:'Great Vibes',cursive;font-weight:400;font-size:1.6rem;color:var(--carbon);margin-bottom:10px;">Atención Personalizada</h4>
         <p style="font-size:0.9rem;color:rgba(30,28,28,0.6);line-height:1.65;">Cada boda es única. Diseñamos cada detalle según tu visión y presupuesto.</p>
       </div>
       <div style="text-align:center;padding:36px 24px;border-radius:20px;border:1.5px solid rgba(30,28,28,0.1);transition:var(--transition);background:#fff;" class="reveal reveal-delay-2 why-c">
-        <div style="width:70px;height:70px;margin:0 auto 20px;border-radius:50%;background:rgba(255,201,52,0.1);display:flex;align-items:center;justify-content:center;font-size:1.7rem;color:var(--golden);">
-          <i class="fas fa-utensils"></i>
-        </div>
-        <h4 style="font-family:'Bebas Neue',sans-serif;font-size:1.25rem;color:var(--carbon);margin-bottom:10px;">Gastronomía de Élite</h4>
+        <div style="width:56px;height:56px;margin:0 auto 20px;border-radius:50%;border:1.5px solid var(--golden-shine);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--golden-shine);">02</div>
+        <h4 style="font-family:'Great Vibes',cursive;font-weight:400;font-size:1.6rem;color:var(--carbon);margin-bottom:10px;">Gastronomía de Élite</h4>
         <p style="font-size:0.9rem;color:rgba(30,28,28,0.6);line-height:1.65;">Catering internacional, parrillas, bajonas y mesas especiales de primera calidad.</p>
       </div>
       <div style="text-align:center;padding:36px 24px;border-radius:20px;border:1.5px solid rgba(30,28,28,0.1);transition:var(--transition);background:#fff;" class="reveal reveal-delay-3 why-c">
-        <div style="width:70px;height:70px;margin:0 auto 20px;border-radius:50%;background:rgba(255,201,52,0.1);display:flex;align-items:center;justify-content:center;font-size:1.7rem;color:var(--golden);">
-          <i class="fas fa-masks-theater"></i>
-        </div>
-        <h4 style="font-family:'Bebas Neue',sans-serif;font-size:1.25rem;color:var(--carbon);margin-bottom:10px;">Shows &amp; Entretenimiento</h4>
+        <div style="width:56px;height:56px;margin:0 auto 20px;border-radius:50%;border:1.5px solid var(--golden-shine);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--golden-shine);">03</div>
+        <h4 style="font-family:'Great Vibes',cursive;font-weight:400;font-size:1.6rem;color:var(--carbon);margin-bottom:10px;">Shows &amp; Entretenimiento</h4>
         <p style="font-size:0.9rem;color:rgba(30,28,28,0.6);line-height:1.65;">Hora loca, números artísticos y espectáculos que hacen brillar tu evento.</p>
       </div>
       <div style="text-align:center;padding:36px 24px;border-radius:20px;border:1.5px solid rgba(30,28,28,0.1);transition:var(--transition);background:#fff;" class="reveal reveal-delay-4 why-c">
-        <div style="width:70px;height:70px;margin:0 auto 20px;border-radius:50%;background:rgba(255,201,52,0.1);display:flex;align-items:center;justify-content:center;font-size:1.7rem;color:var(--golden);">
-          <i class="fas fa-star"></i>
-        </div>
-        <h4 style="font-family:'Bebas Neue',sans-serif;font-size:1.25rem;color:var(--carbon);margin-bottom:10px;">Experiencia Comprobada</h4>
+        <div style="width:56px;height:56px;margin:0 auto 20px;border-radius:50%;border:1.5px solid var(--golden-shine);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--golden-shine);">04</div>
+        <h4 style="font-family:'Great Vibes',cursive;font-weight:400;font-size:1.6rem;color:var(--carbon);margin-bottom:10px;">Experiencia Comprobada</h4>
         <p style="font-size:0.9rem;color:rgba(30,28,28,0.6);line-height:1.65;">14 años y más de 200 bodas exitosas nos respaldan en Lima y todo el Perú.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="testimonials-section" style="padding:90px 5vw;">
+    <div style="max-width:1100px;margin:0 auto;text-align:center">
+      <div class="section-label reveal">Testimonios</div>
+      <h2 class="reveal" style="font-family:'Great Vibes',cursive;font-weight:400;font-size:clamp(2.6rem,6vw,4.2rem);color:var(--mint);">Lo que dicen de nosotros</h2>
+      <p class="section-desc reveal" style="margin:0 auto;color:rgba(249,255,252,0.55);">Las palabras de quienes ya vivieron su gran día con nosotros.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal reveal-delay-1">
+        <span class="testimonial-mark">“</span>
+        <p class="testimonial-quote">Quedamos felices con la decoración y la mesa de dulces. La Hora Loca hizo bailar a todos, fue la fiesta del año.</p>
+        <div class="testimonial-author">Rosangel · Bodas de Oro</div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <span class="testimonial-mark">“</span>
+        <p class="testimonial-quote">Una fiesta inolvidable, todo estuvo exquisito y de muy buen gusto. Totalmente recomendados.</p>
+        <div class="testimonial-author">Cliente · Instagram</div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-3">
+        <span class="testimonial-mark">“</span>
+        <p class="testimonial-quote">Muy profesionales y atentos a cada detalle. Realmente hacen realidad tus sueños.</p>
+        <div class="testimonial-author">Cliente · Instagram</div>
       </div>
     </div>
   </section>
@@ -902,7 +947,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
   <!-- LOCATION -->
   <section style="background:var(--carbon);padding:90px 5vw;">
     <div style="max-width:1100px;margin:0 auto;">
-      <div class="section-label reveal"><i class="fas fa-map-marker-alt" style="font-size:0.8rem"></i> Encuéntranos</div>
+      <div class="section-label reveal">Encuéntranos</div>
       <h2 class="section-title reveal" style="color:var(--mint);">Estamos en <span style="color:var(--golden);">Lima</span></h2>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;max-width:1100px;margin:0 auto;margin-top:52px;" class="loc-grid-resp">
@@ -918,7 +963,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
         <p style="color:rgba(249,255,252,0.6);font-size:1rem;line-height:1.75;margin-bottom:32px;">Atendemos a domicilio y en el local que elijas. Coordinamos en todo Lima y provincias para hacer tu sueño realidad.</p>
         <div style="display:flex;flex-direction:column;gap:20px;">
           <div style="display:flex;align-items:flex-start;gap:16px;">
-            <div style="width:46px;height:46px;min-width:46px;background:rgba(255,201,52,0.1);border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--golden);font-size:1.1rem;">
+            <div style="width:46px;height:46px;min-width:46px;background:rgba(216,195,165,0.1);border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--golden);font-size:1.1rem;">
               <i class="fas fa-map-marker-alt"></i>
             </div>
             <div>
@@ -927,7 +972,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
             </div>
           </div>
           <div style="display:flex;align-items:flex-start;gap:16px;">
-            <div style="width:46px;height:46px;min-width:46px;background:rgba(255,201,52,0.1);border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--golden);font-size:1.1rem;">
+            <div style="width:46px;height:46px;min-width:46px;background:rgba(216,195,165,0.1);border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--golden);font-size:1.1rem;">
               <i class="fab fa-whatsapp"></i>
             </div>
             <div>
@@ -936,7 +981,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
             </div>
           </div>
           <div style="display:flex;align-items:flex-start;gap:16px;">
-            <div style="width:46px;height:46px;min-width:46px;background:rgba(255,201,52,0.1);border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--golden);font-size:1.1rem;">
+            <div style="width:46px;height:46px;min-width:46px;background:rgba(216,195,165,0.1);border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--golden);font-size:1.1rem;">
               <i class="fab fa-instagram"></i>
             </div>
             <div>
@@ -956,8 +1001,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
   <div style="min-height:56vh;background:var(--carbon);display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 5vw 80px;position:relative;overflow:hidden;">
     <div style="position:absolute;inset:0;opacity:0.04;background-image:radial-gradient(circle,var(--golden) 1px,transparent 1px);background-size:32px 32px;"></div>
     <div style="position:relative;z-index:2;max-width:700px;">
-      <div class="section-label" style="margin-bottom:20px;">
-        <i class="fas fa-star-of-life" style="font-size:0.8rem"></i> Nuestra Historia
+      <div class="section-label" style="margin-bottom:20px;">Nuestra Historia
       </div>
       <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,7vw,5.5rem);color:var(--mint);margin-bottom:20px;">
         Sobre Elegancia <span style="color:var(--golden);">Sabor y Estilos</span>
@@ -979,7 +1023,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
         </div>
       </div>
       <div class="about-text">
-        <div class="section-label dark reveal"><i class="fas fa-book-open" style="font-size:0.8rem"></i> Quiénes Somos</div>
+        <div class="section-label dark reveal">Quiénes Somos</div>
         <h2 class="section-title reveal">Una Pasión por los <span class="accent">Eventos</span></h2>
         <p class="section-desc reveal">Élite Events nació en Lima con una misión clara: encargarse de cada detalle dentro de tu boda o evento social. Somos especialistas en producción integral: desde la decoración hasta el último show de hora loca.</p>
         <p class="section-desc reveal" style="margin-top:14px;">Trabajamos con los mejores proveedores de Lima para garantizar que cada elemento de tu celebración sea impecable, memorable y a la altura de tus sueños.</p>
@@ -995,7 +1039,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
 
   <section class="values-section">
     <div style="max-width:1100px;margin:0 auto;text-align:center;">
-      <div class="section-label reveal"><i class="fas fa-star" style="font-size:0.8rem"></i> Lo que nos define</div>
+      <div class="section-label reveal">Lo que nos define</div>
       <h2 class="section-title reveal" style="color:var(--mint);">Nuestros <span style="color:var(--golden);">Valores</span></h2>
       <p class="section-desc reveal" style="margin:0 auto;color:rgba(249,255,252,0.55);">Los principios que guían cada evento que producimos.</p>
     </div>
@@ -1035,7 +1079,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
 
   <section style="background:var(--mint);padding:90px 5vw;">
     <div style="max-width:1100px;margin:0 auto;">
-      <div class="section-label dark reveal"><i class="fas fa-users" style="font-size:0.8rem"></i> Síguenos</div>
+      <div class="section-label dark reveal">Síguenos</div>
       <h2 class="section-title reveal">Conecta con <span style="color:var(--carbon);text-decoration:underline;text-decoration-color:var(--golden);">Nosotros</span></h2>
       <p class="section-desc reveal">Síguenos en redes sociales para ver nuestros eventos más recientes y detrás de cámaras.</p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:52px;" class="team-grid-resp">
@@ -1065,8 +1109,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
   <div style="background:var(--carbon);padding:100px 5vw 60px;text-align:center;position:relative;overflow:hidden;">
     <div style="position:absolute;inset:0;opacity:0.04;background-image:repeating-linear-gradient(45deg,var(--golden) 0,var(--golden) 1px,transparent 0,transparent 50%);background-size:28px 28px;"></div>
     <div style="position:relative;z-index:2;">
-      <div class="section-label" style="display:inline-flex;margin-bottom:16px;">
-        <i class="fas fa-gem" style="font-size:0.8rem"></i> Catálogo completo
+      <div class="section-label" style="display:inline-flex;margin-bottom:16px;">Catálogo completo
       </div>
       <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,6vw,5rem);color:var(--mint);margin-bottom:14px;">
         Nuestros <span style="color:var(--golden);">Servicios</span>
@@ -1080,7 +1123,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
 
   <section class="process-section">
     <div style="max-width:1100px;margin:0 auto;text-align:center;">
-      <div class="section-label reveal"><i class="fas fa-route" style="font-size:0.8rem"></i> Nuestro proceso</div>
+      <div class="section-label reveal">Nuestro proceso</div>
       <h2 class="section-title reveal" style="color:var(--mint);">Cómo <span style="color:var(--golden);">Trabajamos</span></h2>
       <p class="section-desc reveal" style="margin:0 auto;color:rgba(249,255,252,0.55);">De la primera consulta al último detalle de tu evento.</p>
     </div>
@@ -1139,8 +1182,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
   <div style="background:var(--carbon);padding:100px 5vw 60px;text-align:center;position:relative;overflow:hidden;">
     <div style="position:absolute;inset:0;opacity:0.04;background-image:radial-gradient(circle,var(--cherry) 1px,transparent 1px);background-size:32px 32px;"></div>
     <div style="position:relative;z-index:2;">
-      <div class="section-label" style="display:inline-flex;margin-bottom:16px;">
-        <i class="fas fa-camera-retro" style="font-size:0.8rem"></i> Nuestros Eventos
+      <div class="section-label" style="display:inline-flex;margin-bottom:16px;">Nuestros Eventos
       </div>
       <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,6vw,5rem);color:var(--mint);margin-bottom:14px;">
         Galería de <span style="color:var(--golden);">Momentos</span>
@@ -1152,7 +1194,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
   <!-- ── GALERÍA DECORACIÓN ── -->
   <section class="gallery-section">
     <div style="max-width:1100px;margin:0 auto;text-align:center;margin-bottom:20px;">
-      <div class="section-label dark reveal"><i class="fas fa-images" style="font-size:0.8rem"></i> Decoración</div>
+      <div class="section-label dark reveal">Decoración</div>
       <h2 class="section-title reveal">Ambientación &amp; <span class="accent">Decoración</span></h2>
     </div>
     <div class="gallery-grid" style="max-width:1100px;margin:0 auto;">
@@ -1185,7 +1227,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
 
     <!-- ── GALERÍA GASTRONOMÍA ── -->
     <div style="max-width:1100px;margin:52px auto 20px;text-align:center;">
-      <div class="section-label dark reveal"><i class="fas fa-utensils" style="font-size:0.8rem"></i> Gastronomía</div>
+      <div class="section-label dark reveal">Gastronomía</div>
       <h2 class="section-title reveal">Mesas &amp; <span class="accent">Catering</span></h2>
     </div>
     <div class="gallery-grid" style="max-width:1100px;margin:0 auto;grid-template-rows:220px 180px;">
@@ -1213,7 +1255,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
 
     <!-- ── GALERÍA SHOWS ── -->
     <div style="max-width:1100px;margin:52px auto 20px;text-align:center;">
-      <div class="section-label dark reveal"><i class="fas fa-masks-theater" style="font-size:0.8rem"></i> Shows</div>
+      <div class="section-label dark reveal">Shows</div>
       <h2 class="section-title reveal">Entretenimiento &amp; <span class="accent">Hora Loca</span></h2>
     </div>
     <div class="gallery-grid" style="max-width:1100px;margin:0 auto;grid-template-rows:220px 180px;">
@@ -1266,7 +1308,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
   -->
   <section class="videos-section">
     <div style="max-width:1100px;margin:0 auto;text-align:center;">
-      <div class="section-label reveal"><i class="fas fa-film" style="font-size:0.8rem"></i> Momentos en Video</div>
+      <div class="section-label reveal">Momentos en Video</div>
       <h2 class="section-title reveal" style="color:var(--mint);">Videos de <span style="color:var(--golden);">Nuestros Eventos</span></h2>
       <p class="section-desc reveal" style="margin:0 auto;color:rgba(249,255,252,0.6);">Mira de cerca la magia que creamos en cada celebración.</p>
     </div>
@@ -1296,7 +1338,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
 
       <!-- ─── VIDEO 2 ─── Reemplaza REEMPLAZA_AQUI_2 con el código de tu video -->
       <div class="yt-card">
-        <div class="yt-card-glow" style="background:radial-gradient(ellipse at bottom,rgba(255,185,208,0.18),transparent 70%);"></div>
+        <div class="yt-card-glow" style="background:radial-gradient(ellipse at bottom,rgba(243,201,214,0.18),transparent 70%);"></div>
         <div class="yt-label" style="background:var(--cherry);color:var(--carbon);">
           <i class="fas fa-th"></i>
           <span>Entretenimiento</span>
@@ -1344,8 +1386,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
 <!-- ======================== CONTACT ======================== -->
 <div class="page" id="page-contact">
   <div style="background:var(--golden);padding:100px 5vw 70px;text-align:center;">
-    <div class="section-label dark" style="display:inline-flex;margin-bottom:18px;">
-      <i class="fas fa-envelope" style="font-size:0.8rem"></i> Estamos aquí
+    <div class="section-label dark" style="display:inline-flex;margin-bottom:18px;">Estamos aquí
     </div>
     <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,6vw,5rem);color:var(--carbon);margin-bottom:14px;">Contáctanos</h1>
     <p style="color:rgba(30,28,28,0.65);font-size:1.05rem;max-width:500px;margin:0 auto;">Escríbenos o llámanos. Siempre tendremos la propuesta perfecta para tu evento.</p>
@@ -1353,7 +1394,7 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
   <section class="contact-section">
     <div class="contact-grid">
       <div class="contact-cards">
-        <div class="section-label dark reveal"><i class="fas fa-info-circle" style="font-size:0.8rem"></i> Información</div>
+        <div class="section-label dark reveal">Información</div>
         <h2 class="section-title reveal" style="margin-bottom:28px;">Medios de <span class="accent">Contacto</span></h2>
         <div class="contact-card reveal">
           <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
@@ -1437,11 +1478,10 @@ footer { background: var(--carbon); color: rgba(249,255,252,0.6); padding: 60px 
     <div class="footer-brand">
       <div class="nav-logo" style="margin-bottom:16px;cursor:default;">
         <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:38px;height:38px;">
-          <rect width="48" height="48" rx="14" fill="#FFC934"/>
-          <path d="M16 22 Q20 17 24 19 Q28 17 32 22" stroke="#1E1C1C" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <circle cx="20" cy="28" r="3" fill="#1E1C1C" opacity="0.3"/>
-          <circle cx="28" cy="28" r="3" fill="#1E1C1C" opacity="0.3"/>
-          <path d="M22 33 Q24 35 26 33" stroke="#1E1C1C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <circle cx="24" cy="24" r="24" fill="#1E1C1C"/>
+          <circle cx="24" cy="24" r="20.5" fill="none" stroke="#D8C3A5" stroke-width="0.6"/>
+          <circle cx="24" cy="24" r="17" fill="none" stroke="#C9A66B" stroke-width="0.4" opacity="0.6"/>
+          <text x="24" y="32" text-anchor="middle" font-family="'Great Vibes', cursive" font-size="26" fill="#D8C3A5">E</text>
         </svg>
         <div class="nav-logo-text">
           <span>Elegancia Sabor y estilos</span>
